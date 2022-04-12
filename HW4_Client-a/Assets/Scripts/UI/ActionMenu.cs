@@ -31,4 +31,9 @@ public class ActionMenu : MonoBehaviour
 	{
 		gameManager.StartWin();
 	}
+
+	public void OnScoreClick()
+	{
+		gameManager.StartScore();
+	}
 }

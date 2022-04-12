@@ -84,6 +84,10 @@ public class GameManager : MonoBehaviour
 	{
 		networkManager.SendWinRequest();
 	}
+	public void StartScore()
+	{
+		networkManager.SendScoreRequest();
+	}
 	public void EndMove(Hero hero)
 	{
 		bool heroCanInteract = false;

@@ -11,6 +11,7 @@ import core.GameClient;
 public class Player {
     private boolean isReady = false;
     private int player_id;
+    private int score = 0;
     private String name;
     private GameClient client; // References GameClient instance
 
@@ -29,6 +30,14 @@ public class Player {
 
     public int setID(int player_id) {
         return this.player_id = player_id;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public int setScore() {
+        return this.score = score+1;
     }
 
     public String getName() {
