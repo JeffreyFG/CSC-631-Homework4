@@ -114,6 +114,18 @@ public class NetworkManager : MonoBehaviour
 		return false;
 	}
 
+	public bool SendScoreRequest()
+	{
+		if (cManager && cManager.IsConnected())
+		{
+			RequestScore request = new RequestScore();
+			request.send();
+			cManager.send(request);
+			return true;
+		}
+		return false;
+	}
+
 	public IEnumerator RequestHeartbeat(float time)
 	{
 		yield return new WaitForSeconds(time);
